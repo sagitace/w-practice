@@ -2,6 +2,7 @@ import Testportal from "./components/Testportal";
 import Link from "next/link";
 import UploadImage from "./components/UploadImage";
 import MyNavbar from "./components/MyNavbar";
+import Head from "next/head";
 
 export default function Home() {
   return (

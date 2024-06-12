@@ -37,3 +37,8 @@ body {
 .br-round {
   border-radius: 100% !important;
 }
+
+.dropdown-button {
+  border: none !important;
+  outline: none !important;
+}

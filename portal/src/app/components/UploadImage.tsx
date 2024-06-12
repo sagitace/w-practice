@@ -20,17 +20,17 @@ const UploadImage = () => {
         <form>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="col-1 max-[768px]:w-full md:col-span-1 col-span-2">
-              <h3>Upload Portal Image</h3>
+              <h3 className="text-[#eeeeee]">Upload Portal Image</h3>
 
               <div className="flex items-center justify-center mt-5">
                 <div className="flex items-center justify-center w-[50%]">
                   <label
                     htmlFor="dropzone-file"
-                    className="flex flex-col items-center justify-center w-full h-56 border-2 border-gray-300 rounded-full cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                    className="flex flex-col items-center justify-center w-full h-56 border-2 border-gray-300 rounded-full cursor-pointer bg-[#2a2c31] dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-800 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
                   >
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       <svg
-                        className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                        className="w-8 h-8 mb-4 text-gray-800 dark:text-gray-600"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -45,7 +45,7 @@ const UploadImage = () => {
                         />
                       </svg>
                       <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-                        <span className="font-semibold">
+                        <span className="font-semibold text-[#eeeeee]">
                           Drag and drop file here{" "}
                         </span>
                       </p>
@@ -66,14 +66,14 @@ const UploadImage = () => {
                 <div className="col-span-7 mb-1">
                   <label
                     htmlFor="name"
-                    className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                   >
                     Name
                   </label>
                   <input
                     type="text"
                     id="name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="3 idiots"
                     required
                   />
@@ -81,7 +81,7 @@ const UploadImage = () => {
                 <div className="col-span-1 ml-2">
                   <label
                     htmlFor="nativeColorPicker1"
-                    className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                   >
                     Color
                   </label>
@@ -95,7 +95,7 @@ const UploadImage = () => {
                 <div className="col-span-8 mb-1">
                   <label
                     htmlFor="category"
-                    className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                   >
                     Category
                   </label>
@@ -103,7 +103,7 @@ const UploadImage = () => {
                     <input
                       type="text"
                       id="category"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Select category"
                       required
                     />
@@ -116,14 +116,14 @@ const UploadImage = () => {
                 <div className="col-span-8 mb-1">
                   <label
                     htmlFor="rating"
-                    className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                   >
                     Ratings
                   </label>
 
                   <select
                     id="rating"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                    className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
                   >
                     <option selected disabled>
                       Choose a rating
@@ -140,14 +140,14 @@ const UploadImage = () => {
                 <div className="col-span-8 mb-1">
                   <label
                     htmlFor="rights"
-                    className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                   >
                     Access Rights
                   </label>
 
                   <select
                     id="rights"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                    className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
                   >
                     <option value="fairuse" selected>
                       Fair Use
@@ -159,14 +159,14 @@ const UploadImage = () => {
                 <div className="col-span-2 mb-1">
                   <label
                     htmlFor="trailertype"
-                    className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                   >
                     Trailer Type
                   </label>
 
                   <select
                     id="trailertype"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     value={trailerType}
                     onChange={handleTrailerTypeChange}
                   >
@@ -178,13 +178,13 @@ const UploadImage = () => {
                 {trailerType === "file" && (
                   <div className="col-span-6 mb-1">
                     <label
-                      className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                       htmlFor="file_input"
                     >
                       Upload file
                     </label>
                     <input
-                      className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-[#2a2c31] dark:border-[#2a2c31] dark:placeholder-gray-400"
+                      className="block w-full text-sm text-[#eeeeee] rounded-lg cursor-pointer bg-[#2a2c31] dark:text-gray-400 focus:outline-none dark:bg-[#2a2c31] dark:border-[#2a2c31] dark:placeholder-gray-400"
                       id="file_input"
                       type="file"
                       required
@@ -195,7 +195,7 @@ const UploadImage = () => {
                 {trailerType === "url" && (
                   <div className="col-span-6 mb-1">
                     <label
-                      className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                       htmlFor="url_input"
                     >
                       Enter URL
@@ -203,7 +203,7 @@ const UploadImage = () => {
                     <input
                       type="text"
                       id="url_input"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Enter source URL..."
                       required
                     />
@@ -212,13 +212,13 @@ const UploadImage = () => {
 
                 <div className="col-span-8 mb-1">
                   <label
-                    className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                     htmlFor="portalBg"
                   >
                     Change Portal Background
                   </label>
                   <input
-                    className="block w-full text-md text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-[#2a2c31] dark:border-[#2a2c31] dark:placeholder-gray-400"
+                    className="block w-full text-md text-[#eeeeee] rounded-lg cursor-pointer bg-[#2a2c31] dark:text-gray-400 focus:outline-none dark:bg-[#2a2c31] dark:border-[#2a2c31] dark:placeholder-gray-400"
                     aria-describedby="file_input_help"
                     id="portalBg"
                     type="file"
@@ -227,7 +227,7 @@ const UploadImage = () => {
                 <div className="col-span-8 mb-1">
                   <label
                     htmlFor="availability"
-                    className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                   >
                     Portal Availability
                   </label>
@@ -236,7 +236,7 @@ const UploadImage = () => {
                     id="availability"
                     value={availability}
                     onChange={handleAvailabilityChange}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                    className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
                   >
                     <option value="free" selected>
                       Free For All
@@ -250,7 +250,7 @@ const UploadImage = () => {
                   <div className="col-span-8 mb-1">
                     <label
                       htmlFor="amount"
-                      className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                     >
                       Purchase Price
                     </label>
@@ -258,7 +258,7 @@ const UploadImage = () => {
                       type="number"
                       name="amount"
                       id="amount"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Enter amount"
                       min={1}
                     />
@@ -266,13 +266,13 @@ const UploadImage = () => {
                 )}
               </div>
               <h3 className="my-1">Description</h3>
-              <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+              <div className="w-full mb-4 border border-gray-400 rounded-lg bg-[#2a2c31] dark:bg-gray-700 dark:border-gray-600">
                 <div className="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
                   <div className="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse dark:divide-gray-600">
                     <div className="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                       <button
                         type="button"
-                        className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                        className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
                       >
                         <svg
                           className="h-4 w-4 text-stone-100"
@@ -291,7 +291,7 @@ const UploadImage = () => {
                       </button>
                       <button
                         type="button"
-                        className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                        className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
                       >
                         <svg
                           className="h-4 w-4 text-stone-100"
@@ -311,7 +311,7 @@ const UploadImage = () => {
                       </button>
                       <button
                         type="button"
-                        className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                        className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
                       >
                         <svg
                           className="h-4 w-4 text-stone-100"
@@ -330,7 +330,7 @@ const UploadImage = () => {
                       </button>
                       <button
                         type="button"
-                        className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                        className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
                       >
                         <svg
                           className="w-4 h-4"
@@ -351,14 +351,14 @@ const UploadImage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+                <div className="px-4 py-2 bg-[#2a2c31] rounded-b-lg dark:bg-gray-800">
                   <label htmlFor="description" className="sr-only">
                     Description
                   </label>
                   <textarea
                     id="description"
                     rows={6}
-                    className="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                    className="block w-full px-0 text-sm text-[#eeeeee] bg-[#2a2c31] border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                     placeholder="Write a description..."
                     required
                   ></textarea>
@@ -367,13 +367,14 @@ const UploadImage = () => {
 
               <button
                 type="button"
-                className="text-black bg-gray-400 hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-gray-400 dark:hover:bg-gray-500 dark:focus:ring-gray-300 px-12"
+                className="text-gray-300 bg-[#c6c6c6df] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-gray-400 dark:focus:ring-gray-300 px-12"
+                disabled
               >
                 Save as draft
               </button>
               <button
                 type="submit"
-                className="text-black bg-white hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-white dark:hover:bg-gray-500 dark:focus:ring-white ml-2 px-20"
+                className="text-black bg-white hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-white dark:hover:bg-gray-500 dark:focus:ring-white ml-2 px-20"
               >
                 Save
               </button>
