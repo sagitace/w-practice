@@ -1,11 +1,13 @@
 import Testportal from "./components/Testportal";
 import Link from "next/link";
 import UploadImage from "./components/UploadImage";
+import MyNavbar from "./components/MyNavbar";
 
 export default function Home() {
   return (
     <main>
       <div>
+        <MyNavbar />
         <div className="flex text-xs m-4">
           {" "}
           <Link href="/" className="text-stone-300">

@@ -18,8 +18,8 @@ const UploadImage = () => {
     <div className="landing m-4 rounded-md p-4">
       <div className="px-10 rounded-md p-3">
         <form>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="col-1">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="col-1 max-[768px]:w-full md:col-span-1 col-span-2">
               <h3>Upload Portal Image</h3>
 
               <div className="flex items-center justify-center mt-5">
@@ -357,7 +357,7 @@ const UploadImage = () => {
                   </label>
                   <textarea
                     id="description"
-                    rows={8}
+                    rows={6}
                     className="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                     placeholder="Write a description..."
                     required
