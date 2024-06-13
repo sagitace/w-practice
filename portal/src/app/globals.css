@@ -20,6 +20,13 @@ body {
   overflow-x: hidden;
   background: var(--background);
 }
+.sidebar {
+  background: var(--elements);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 
 .landing {
   background: var(--elements);

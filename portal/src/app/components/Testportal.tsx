@@ -4,7 +4,7 @@ import Image from "next/image";
 const Testportal = () => {
   return (
     <div className="landing m-4 rounded-md p-4">
-      <div className="border px-10 inner-landing rounded-md p-3 bg-[url('/assets/bg.jpg')] object-fill">
+      <div className="border px-10 inner-landing rounded-md p-3 bg-[url('/assets/bg.jpg')] bg-cover">
         <div className="grid grid-cols-3 min-[768px]:grid-cols-4 gap-3 pt-4">
           <div className="col-1">
             <Image
@@ -29,27 +29,27 @@ const Testportal = () => {
 
         <h3 className="font-bold text-lg my-10">Collection</h3>
 
-        <div className="grid xl:grid-cols-10 lg:grid-cols-7 md:grid-cols-7 grid-cols-3 gap-3 pb-5">
+        <div className="grid xl:grid-cols-8 lg:grid-cols-7 md:grid-cols-7 grid-cols-3 gap-3 pb-5">
           <div className="col-1 border rounded-md h-40 flex justify-center items-center">
-            Add Collection
+            Collection
           </div>
           <div className="col-2 border rounded-md h-40 flex justify-center items-center">
-            Add Collection
+            Collection
           </div>
           <div className="col-3 border rounded-md h-40 flex justify-center items-center">
-            Add Collection
+            Collection
           </div>
           <div className="col-4 border rounded-md h-40 flex justify-center items-center">
-            Add Collection
+            Collection
           </div>
           <div className="col-5 border rounded-md h-40 flex justify-center items-center">
-            Add Collection
+            Collection
           </div>
           <div className="col-6 border rounded-md h-40 flex justify-center items-center">
-            Add Collection
+            Collection
           </div>
           <div className="col-7 border rounded-md h-40 flex justify-center items-center">
-            Add Collection
+            Collection
           </div>
         </div>
       </div>

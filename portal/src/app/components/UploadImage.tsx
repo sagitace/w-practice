@@ -364,20 +364,21 @@ const UploadImage = () => {
                   ></textarea>
                 </div>
               </div>
-
-              <button
-                type="button"
-                className="text-gray-300 bg-[#c6c6c6df] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-gray-400 dark:focus:ring-gray-300 px-12"
-                disabled
-              >
-                Save as draft
-              </button>
-              <button
-                type="submit"
-                className="text-black bg-white hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-white dark:hover:bg-gray-500 dark:focus:ring-white ml-2 px-20"
-              >
-                Save
-              </button>
+              <div className="w-full flex items-end justify-end">
+                <button
+                  type="button"
+                  className="text-gray-300 bg-[#c6c6c6df] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-gray-400 dark:focus:ring-gray-300 px-12"
+                  disabled
+                >
+                  Save as draft
+                </button>
+                <button
+                  type="submit"
+                  className="text-black bg-white hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-white dark:hover:bg-gray-500 dark:focus:ring-white ml-2 px-20"
+                >
+                  Save
+                </button>
+              </div>
             </div>
           </div>
         </form>
