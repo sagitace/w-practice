@@ -16,7 +16,7 @@ import { MdEmojiEmotions } from "react-icons/md";
 import { GrAnnounce } from "react-icons/gr";
 
 export default function Home() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState<number | null>(null);
 
   const toggleSubmenu = (index: number) => {
@@ -65,9 +65,9 @@ export default function Home() {
         <MyNavbar />
         <div className="flex">
           <div
-            className={`h-full ${
+            className={`h-full shadow-xl ${
               open ? "w-56" : "w-14"
-            } sidebar duration-300 mt-16`}
+            } sidebar duration-300 md:mt-16 mt-12`}
           >
             <div className="overflow-hidden shadow-xl max-w-xs border-b border-[#8b8b8b68]">
               <img
@@ -132,7 +132,7 @@ export default function Home() {
                       {menu.icon ? menu.icon : <MdDashboard />}
                     </span>
                     <span
-                      className={`text-base font-medium flex-1 ${
+                      className={`text-xs sm:text-base font-medium flex-1 ${
                         !open && "hidden"
                       }`}
                     >
@@ -151,7 +151,7 @@ export default function Home() {
                       {menu.submenuItems.map((submenuItem, submenuIndex) => (
                         <li
                           key={submenuIndex}
-                          className="text-[#eeeeee] text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-[#8b8b8b25] rounded-md"
+                          className="text-[#eeeeee] text-xs sm:text-base flex items-center gap-x-4 cursor-pointer p-2 px-5 hover:bg-[#8b8b8b25] rounded-md"
                         >
                           {submenuItem.title}
                         </li>
@@ -165,24 +165,35 @@ export default function Home() {
 
           <div
             className={`w-full duration-300 ml-1 ${
-              open ? "ml-[14.2rem]" : "ml-[3.7rem]"
+              open ? "ml-[14.2rem] max-[640px]:ml-[3.7rem]" : "ml-[3.7rem]"
             }`}
           >
-            <div className="flex text-xs mt-3 mx-4">
+            <div className="flex text-xs md:mt-3 mx-4">
               {" "}
-              <Link href="/" className="text-stone-300">
+              <Link
+                href="/"
+                className="text-stone-300 text-[10px] sm:text-xs lg:text-sm"
+              >
                 My Portals
               </Link>{" "}
               &nbsp; &gt; &nbsp;
-              <Link href="/" className="text-stone-300">
+              <Link
+                href="/"
+                className="text-stone-300 text-[10px] sm:text-xs lg:text-sm"
+              >
                 Portal List
               </Link>{" "}
               &nbsp; &gt; &nbsp;
-              <Link href="/" className="text-stone-300">
+              <Link
+                href="/"
+                className="text-stone-300 text-[10px] sm:text-xs lg:text-sm"
+              >
                 Portal Generator
               </Link>{" "}
               &nbsp; &gt; &nbsp;
-              <Link href="/">Edit</Link>
+              <Link href="/" className="text-[10px] sm:text-xs lg:text-sm">
+                Edit
+              </Link>
             </div>
             <h1 className="font-bold m-4 border-bot pb-2 text-2xl">
               Edit Portal
