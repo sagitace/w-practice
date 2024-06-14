@@ -21,9 +21,6 @@ const UploadImage = () => {
 
   const [isAccordionOpen2a, setIsAccordionOpen2a] = useState(false);
   const [isAccordionOpen2b, setIsAccordionOpen2b] = useState(false);
-  const [isAccordionOpen3b, setIsAccordionOpen3b] = useState(false);
-  const [isAccordionOpen4b, setIsAccordionOpen4b] = useState(false);
-  const [isAccordionOpen5b, setIsAccordionOpen5b] = useState(false);
 
   return (
     <div className="landing m-4 rounded-md p-2 max-[431px]:p-1 md:p-3 lg:p-4">
@@ -113,13 +110,6 @@ const UploadImage = () => {
                     Category
                   </label>
                   <div className="flex gap-2">
-                    {/* <input
-                      type="text"
-                      id="category"
-                      className=""
-                      placeholder="Select category"
-                      required
-                    /> */}
                     <input
                       type="text"
                       placeholder="Search..."
