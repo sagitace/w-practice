@@ -22,6 +22,10 @@ const UploadImage = () => {
   const [isAccordionOpen2a, setIsAccordionOpen2a] = useState(false);
   const [isAccordionOpen2b, setIsAccordionOpen2b] = useState(false);
 
+  const handleSave = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="landing m-4 rounded-md p-2 max-[431px]:p-1 md:p-3 lg:p-4">
       <div className="lg:px-10 md:px-7 sm:px-5 max-sm:px-3 rounded-md p-3">
@@ -117,7 +121,11 @@ const UploadImage = () => {
                       onClick={() => setShowModal(true)}
                     />
 
-                    <Modal show={showModal} onClose={() => setShowModal(false)}>
+                    <Modal
+                      show={showModal}
+                      onClose={() => setShowModal(false)}
+                      onSave={handleSave}
+                    >
                       <div className="space-y-2 mt-8 max-sm:mt-3 sm:mt-4 p-3 bg-[#2a2c31] rounded-md">
                         <h1 className="text-[#eeeeee] text-md max-sm:text-md p-2 border-b border-[#8b8b8b68]">
                           Sub Category
