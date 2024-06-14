@@ -15,22 +15,24 @@ const UploadImage = () => {
   };
 
   return (
-    <div className="landing m-4 rounded-md p-4">
-      <div className="px-10 rounded-md p-3">
+    <div className="landing m-4 rounded-md p-2 max-[431px]:p-1 md:p-3 lg:p-4">
+      <div className="lg:px-10 md:px-7 sm:px-5 max-sm:px-3 rounded-md p-3">
         <form>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="col-1 max-[768px]:w-full md:col-span-1 col-span-2">
-              <h3 className="text-[#eeeeee]">Upload Portal Image</h3>
+              <h3 className="text-[#eeeeee] md:text-lg sm:text-md text-sm ">
+                Upload Portal Image
+              </h3>
 
               <div className="flex items-center justify-center mt-5">
-                <div className="flex items-center justify-center w-[50%]">
+                <div className="flex items-center justify-center w-full">
                   <label
                     htmlFor="dropzone-file"
-                    className="flex flex-col items-center justify-center w-full h-56 border-2 border-gray-300 rounded-full cursor-pointer bg-[#2a2c31] dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-800 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                    className="flex flex-col items-center justify-center lg:w-56 lg:h-56 md:w-50 md:h-50 sm:w-28 sm:h-28 max-sm:w-28 max-sm:h-28 border-2 border-gray-300 rounded-full cursor-pointer bg-[#2a2c31] dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-800 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
                   >
-                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                    <div className="flex flex-col items-center justify-center pt-5 md:pb-6 pb-3">
                       <svg
-                        className="w-8 h-8 mb-4 text-gray-800 dark:text-gray-600"
+                        className="w-8 h-8 md:mb-4 sm:mb-2 text-gray-800 dark:text-gray-600"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -44,9 +46,9 @@ const UploadImage = () => {
                           d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                         />
                       </svg>
-                      <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-                        <span className="font-semibold text-[#eeeeee]">
-                          Drag and drop file here{" "}
+                      <p className="mb-1 text-center">
+                        <span className="font-semibold text-[#eeeeee] text-xs md:text-md lg:text-lg xl:text-xl">
+                          Drag or drop file here{" "}
                         </span>
                       </p>
                     </div>
@@ -63,7 +65,7 @@ const UploadImage = () => {
 
             <div className="col-2 col-span-2">
               <div className="grid grid-cols-8 gap-1">
-                <div className="col-span-7 mb-1">
+                <div className="col-span-7 max-sm:col-span-6 mb-1">
                   <label
                     htmlFor="name"
                     className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
@@ -78,7 +80,7 @@ const UploadImage = () => {
                     required
                   />
                 </div>
-                <div className="col-span-1 ml-2">
+                <div className="col-span-1 max-sm:col-span-2 ml-2">
                   <label
                     htmlFor="nativeColorPicker1"
                     className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
@@ -89,7 +91,7 @@ const UploadImage = () => {
                     id="nativeColorPicker1"
                     type="color"
                     value="#6590D5"
-                    className="w-[60%]"
+                    className="w-[60%] max-sm:w-full"
                   />
                 </div>
                 <div className="col-span-8 mb-1">
@@ -107,7 +109,7 @@ const UploadImage = () => {
                       placeholder="Select category"
                       required
                     />
-                    <button className="bg-[#ebebeb] hover:bg-gray-400 text-black font-bold px-4 rounded-lg">
+                    <button className="bg-[#ebebeb] hover:bg-gray-400 text-black font-bold px-4 rounded-lg text-sm md:text-md max-sm:px-2">
                       Browse
                     </button>
                   </div>
@@ -156,7 +158,7 @@ const UploadImage = () => {
                     <option value="original">Original Content</option>
                   </select>
                 </div>
-                <div className="col-span-2 mb-1">
+                <div className="col-span-2 max-sm:col-span-8 mb-1">
                   <label
                     htmlFor="trailertype"
                     className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
@@ -176,7 +178,7 @@ const UploadImage = () => {
                 </div>
 
                 {trailerType === "file" && (
-                  <div className="col-span-6 mb-1">
+                  <div className="col-span-6 max-sm:col-span-8 mb-1">
                     <label
                       className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                       htmlFor="file_input"
@@ -193,7 +195,7 @@ const UploadImage = () => {
                 )}
 
                 {trailerType === "url" && (
-                  <div className="col-span-6 mb-1">
+                  <div className="col-span-6 max-sm:col-span-8 mb-1">
                     <label
                       className="block mb-1 text-sm font-medium text-[#eeeeee] dark:text-white"
                       htmlFor="url_input"
@@ -218,7 +220,7 @@ const UploadImage = () => {
                     Change Portal Background
                   </label>
                   <input
-                    className="block w-full text-md text-[#eeeeee] rounded-lg cursor-pointer bg-[#2a2c31] dark:text-gray-400 focus:outline-none dark:bg-[#2a2c31] dark:border-[#2a2c31] dark:placeholder-gray-400"
+                    className="block w-full text-md max-sm:text-sm text-[#eeeeee] rounded-lg cursor-pointer bg-[#2a2c31] dark:text-gray-400 focus:outline-none dark:bg-[#2a2c31] dark:border-[#2a2c31] dark:placeholder-gray-400"
                     aria-describedby="file_input_help"
                     id="portalBg"
                     type="file"
@@ -367,14 +369,14 @@ const UploadImage = () => {
               <div className="w-full flex items-end justify-end">
                 <button
                   type="button"
-                  className="text-gray-300 bg-[#c6c6c6df] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-gray-400 dark:focus:ring-gray-300 px-12"
+                  className="text-gray-300 bg-[#c6c6c6df] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm max-sm:text-xs sm:w-auto py-2.5 text-center dark:bg-gray-400 dark:focus:ring-gray-300 px-12 max-sm:px-5"
                   disabled
                 >
                   Save as draft
                 </button>
                 <button
                   type="submit"
-                  className="text-black bg-white hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm sm:w-auto py-2.5 text-center dark:bg-white dark:hover:bg-gray-500 dark:focus:ring-white ml-2 px-20"
+                  className="text-black bg-white hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm max-sm:text-xs sm:w-auto py-2.5 text-center dark:bg-white dark:hover:bg-gray-500 dark:focus:ring-white ml-2 px-20 max-sm:px-5"
                 >
                   Save
                 </button>

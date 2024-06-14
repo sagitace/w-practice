@@ -195,7 +195,7 @@ export default function Home() {
                 Edit
               </Link>
             </div>
-            <h1 className="font-bold m-4 border-bot pb-2 text-2xl">
+            <h1 className="font-bold m-4 border-bot pb-2 md:text-2xl text-base sm:text-md">
               Edit Portal
             </h1>
             <Testportal />
