@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent } from "react";
+import Modal from "./Modal";
 
 const UploadImage = () => {
   const [availability, setAvailability] = useState("free");
@@ -13,6 +14,16 @@ const UploadImage = () => {
   const handleTrailerTypeChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setTrailerType(event.target.value);
   };
+
+  const [showModal, setShowModal] = useState(false);
+  const [isAccordionOpen1a, setIsAccordionOpen1a] = useState(false);
+  const [isAccordionOpen1b, setIsAccordionOpen1b] = useState(false);
+
+  const [isAccordionOpen2a, setIsAccordionOpen2a] = useState(false);
+  const [isAccordionOpen2b, setIsAccordionOpen2b] = useState(false);
+  const [isAccordionOpen3b, setIsAccordionOpen3b] = useState(false);
+  const [isAccordionOpen4b, setIsAccordionOpen4b] = useState(false);
+  const [isAccordionOpen5b, setIsAccordionOpen5b] = useState(false);
 
   return (
     <div className="landing m-4 rounded-md p-2 max-[431px]:p-1 md:p-3 lg:p-4">
@@ -47,7 +58,7 @@ const UploadImage = () => {
                         />
                       </svg>
                       <p className="mb-1 text-center">
-                        <span className="font-semibold text-[#eeeeee] text-xs md:text-md lg:text-lg xl:text-xl">
+                        <span className="font-semibold text-[#eeeeee] text-xs md:text-md lg:text-lg xl:text-lg">
                           Drag or drop file here{" "}
                         </span>
                       </p>
@@ -102,13 +113,129 @@ const UploadImage = () => {
                     Category
                   </label>
                   <div className="flex gap-2">
-                    <input
+                    {/* <input
                       type="text"
                       id="category"
-                      className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className=""
                       placeholder="Select category"
                       required
+                    /> */}
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      className="bg-[#2a2c31] border border-gray-400 text-[#eeeeee] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      onClick={() => setShowModal(true)}
                     />
+
+                    <Modal show={showModal} onClose={() => setShowModal(false)}>
+                      <div className="space-y-2 mt-8 max-sm:mt-3 sm:mt-4 p-3 bg-[#2a2c31] rounded-md">
+                        <h1 className="text-[#eeeeee] text-md max-sm:text-md p-2 border-b border-[#8b8b8b68]">
+                          Sub Category
+                        </h1>
+                        <div className="lg:h-60 xl:h-64 max-sm:h-48 sm:h-52 overflow-auto">
+                          <button
+                            onClick={() =>
+                              setIsAccordionOpen1a(!isAccordionOpen1a)
+                            }
+                            className="w-full text-left p-2 border-b border-[#8b8b8b68] flex justify-between text-sm sm:text-md"
+                          >
+                            Qux<span>{isAccordionOpen1a ? "-" : "+"}</span>
+                          </button>
+
+                          {isAccordionOpen1a && (
+                            <div className="pl-4">
+                              <button
+                                onClick={() =>
+                                  setIsAccordionOpen1b(!isAccordionOpen1b)
+                                }
+                                className="w-full text-left p-2 border-b border-[#8b8b8b30]  flex justify-between mt-2 text-sm sm:text-md"
+                              >
+                                Qux 1
+                                <span>{isAccordionOpen1b ? "-" : "+"}</span>
+                              </button>
+                              {isAccordionOpen1b && (
+                                <div className="pl-4">
+                                  <div className="mt-2">
+                                    <label className="inline-flex items-center justify-between w-full pr-5">
+                                      <span className="ml-2 text-sm sm:text-md">
+                                        Example 1
+                                      </span>
+                                      <input
+                                        type="radio"
+                                        name="radioOption"
+                                        className="form-radio"
+                                      />
+                                    </label>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                          <button
+                            onClick={() =>
+                              setIsAccordionOpen2a(!isAccordionOpen2a)
+                            }
+                            className="w-full text-left p-2 border-b border-[#8b8b8b68] flex justify-between text-sm sm:text-md"
+                          >
+                            Entertainment
+                            <span>{isAccordionOpen2a ? "-" : "+"}</span>
+                          </button>
+
+                          {isAccordionOpen2a && (
+                            <div className="pl-4">
+                              <button
+                                onClick={() =>
+                                  setIsAccordionOpen2b(!isAccordionOpen2b)
+                                }
+                                className="w-full text-left p-2 border-b border-[#8b8b8b30]  flex justify-between mt-2 text-sm sm:text-md"
+                              >
+                                Shows
+                                <span>{isAccordionOpen2b ? "-" : "+"}</span>
+                              </button>
+                              {isAccordionOpen2b && (
+                                <div className="pl-4">
+                                  <div className="mt-2">
+                                    <label className="inline-flex items-center justify-between w-full pr-5">
+                                      <span className="ml-2 text-sm sm:text-md">
+                                        Children Shows
+                                      </span>
+                                      <input
+                                        type="radio"
+                                        name="radioOption"
+                                        className="form-radio ml-2"
+                                      />
+                                    </label>
+                                  </div>
+                                  <div className="mt-2">
+                                    <label className="inline-flex items-center justify-between w-full pr-5">
+                                      <span className="ml-2 ">Comedy</span>
+                                      <input
+                                        type="radio"
+                                        name="radioOption"
+                                        className="form-radio ml-2"
+                                      />
+                                    </label>
+                                  </div>
+                                  <div className="mt-2">
+                                    <label className="inline-flex items-center justify-between w-full pr-5">
+                                      <span className="ml-2 text-sm sm:text-md">
+                                        Factual/Documentary
+                                      </span>
+                                      <input
+                                        type="radio"
+                                        name="radioOption"
+                                        className="form-radio ml-2"
+                                      />
+                                    </label>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </Modal>
+
                     <button className="bg-[#ebebeb] hover:bg-gray-400 text-black font-bold px-4 rounded-lg text-sm md:text-md max-sm:px-2">
                       Browse
                     </button>
