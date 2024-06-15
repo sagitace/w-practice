@@ -130,7 +130,7 @@ const UploadImage = () => {
                         <h1 className="text-[#eeeeee] text-md max-sm:text-md p-2 border-b border-[#8b8b8b68]">
                           Sub Category
                         </h1>
-                        <div className="lg:h-60 xl:h-64 max-sm:h-48 sm:h-52 overflow-auto">
+                        <div className="lg:h-60 xl:h-64 max-sm:h-60 sm:h-60 overflow-auto">
                           <button
                             onClick={() =>
                               setIsAccordionOpen1a(!isAccordionOpen1a)
@@ -501,7 +501,7 @@ const UploadImage = () => {
                 </button>
                 <button
                   type="submit"
-                  className="text-black bg-white hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm max-sm:text-xs sm:w-auto py-2.5 text-center dark:bg-white dark:hover:bg-gray-500 dark:focus:ring-white ml-2 px-20 max-sm:px-5"
+                  className="text-[#2a2c31] bg-white hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm max-sm:text-xs sm:w-auto py-2.5 text-center dark:bg-white dark:hover:bg-gray-500 dark:focus:ring-white ml-2 px-20 max-sm:px-5"
                 >
                   Save
                 </button>
